@@ -1,4 +1,4 @@
-import notesImage from "@/assets/middle_notes_orion.webp.asset.json";
+import notesImage from "@/assets/aqua_notes.webp.asset.json";
 import { Reveal } from "./reveal";
 
 const PYRAMID = [
@@ -31,12 +31,12 @@ export function FragranceNotes() {
           </ul>
           <img
             src={notesImage.url}
-            width={750}
-            height={750}
+            width={900}
+            height={900}
             loading="lazy"
             decoding="async"
             sizes="(max-width: 768px) 90vw, 38vw"
-            alt="Botanical ingredients suspended in clear ice, evoking the cool heart of SARKAR Aqua"
+            alt="Mint, lavender, rosemary, neroli and cedarwood suspended in clear ice — the notes of SARKAR Aqua"
             className="reveal w-full"
           />
         </div>
