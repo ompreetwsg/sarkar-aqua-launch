@@ -1,24 +1,77 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import { Navbar } from "@/components/aqua/Navbar";
+import { Hero } from "@/components/aqua/Hero";
+import { ProductIntro } from "@/components/aqua/ProductIntro";
+import { FragranceNotes } from "@/components/aqua/FragranceNotes";
+import { ScentJourney } from "@/components/aqua/ScentJourney";
+import { Lifestyle } from "@/components/aqua/Lifestyle";
+import { PurchaseSection } from "@/components/aqua/PurchaseSection";
+import { WhyAqua } from "@/components/aqua/WhyAqua";
+import { Testimonials } from "@/components/aqua/Testimonials";
+import { FinalCTA } from "@/components/aqua/FinalCTA";
+import { Footer } from "@/components/aqua/Footer";
+import heroAsset from "@/assets/packaging_2.webp.asset.json";
+
+const TITLE = "SARKAR AQUA — Freshness, With Presence";
+const DESCRIPTION =
+  "Discover SARKAR AQUA, a fresh aquatic Eau de Parfum with marine notes, mint, lavender, clean woods and musk.";
+
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:type", content: "product" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [
+      { rel: "canonical", href: "/" },
+      { rel: "preload", as: "image", href: heroAsset.url, fetchpriority: "high" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: "SARKAR AQUA",
+          brand: { "@type": "Brand", name: "SARKAR" },
+          description: DESCRIPTION,
+          category: "Eau de Parfum",
+          size: "100 ml",
+          offers: {
+            "@type": "Offer",
+            price: "1499",
+            priceCurrency: "INR",
+            availability: "https://schema.org/InStock",
+          },
+        }),
+      },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <ProductIntro />
+        <FragranceNotes />
+        <ScentJourney />
+        <Lifestyle />
+        <PurchaseSection />
+        <WhyAqua />
+        <Testimonials />
+        <FinalCTA />
+      </main>
+      <Footer />
+    </>
   );
 }
