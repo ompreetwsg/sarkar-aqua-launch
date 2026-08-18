@@ -1,4 +1,4 @@
-import heroAsset from "@/assets/packaging_2.webp.asset.json";
+import heroAsset from "@/assets/aqua_packaging.webp.asset.json";
 
 export function Hero() {
   return (
@@ -36,8 +36,8 @@ export function Hero() {
         <div className="order-1 md:order-2">
           <img
             src={heroAsset.url}
-            width={823}
-            height={823}
+            width={900}
+            height={900}
             fetchPriority="high"
             decoding="async"
             sizes="(max-width: 768px) 92vw, 44vw"

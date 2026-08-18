@@ -5,7 +5,7 @@ export function ProductIntro() {
   return (
     <Reveal as="section" id="fragrance" className="border-t border-border">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-20 md:grid-cols-2 md:px-10 md:py-32">
-        <div className="reveal bg-secondary/40 p-6 md:p-12">
+        <div className="reveal p-6 md:p-12">
           <img
             src={bottle.url}
             width={823}
@@ -14,7 +14,7 @@ export function ProductIntro() {
             decoding="async"
             sizes="(max-width: 768px) 88vw, 42vw"
             alt="SARKAR Aqua 100 ml Eau de Parfum bottle shaped as a chess king in deep blue glass"
-            className="mx-auto w-full max-w-[420px] mix-blend-lighten"
+            className="mx-auto w-full max-w-[420px] mix-blend-screen"
           />
         </div>
         <div className="reveal">

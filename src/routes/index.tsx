@@ -11,7 +11,7 @@ import { WhyAqua } from "@/components/aqua/WhyAqua";
 import { Testimonials } from "@/components/aqua/Testimonials";
 import { FinalCTA } from "@/components/aqua/FinalCTA";
 import { Footer } from "@/components/aqua/Footer";
-import heroAsset from "@/assets/packaging_2.webp.asset.json";
+import heroAsset from "@/assets/aqua_packaging.webp.asset.json";
 
 const TITLE = "SARKAR AQUA — Freshness, With Presence";
 const DESCRIPTION =
