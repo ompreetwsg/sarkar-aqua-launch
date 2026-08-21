@@ -13,7 +13,7 @@ export function FinalCTA() {
         sizes="100vw"
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover opacity-20"
+        className="mono-shot absolute inset-0 h-full w-full object-cover opacity-20"
       />
       <div
         className="absolute inset-0"

@@ -37,7 +37,7 @@ export function FragranceNotes() {
             decoding="async"
             sizes="(max-width: 768px) 90vw, 38vw"
             alt="Mint, lavender, rosemary, neroli and cedarwood suspended in clear ice — the notes of SARKAR Aqua"
-            className="reveal w-full"
+            className="reveal mono-shot w-full"
           />
         </div>
       </div>

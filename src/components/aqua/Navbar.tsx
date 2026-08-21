@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const LINKS = [
   { href: "#fragrance", label: "Fragrance" },
@@ -9,16 +9,22 @@ const LINKS = [
 
 export function Navbar() {
   const [solid, setSolid] = useState(false);
+  const sentinel = useRef<HTMLDivElement>(null);
 
+  // IntersectionObserver instead of a scroll handler: no per-frame work on the main thread.
   useEffect(() => {
-    const onScroll = () => setSolid(window.scrollY > 48);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    const el = sentinel.current;
+    if (!el) return;
+    const io = new IntersectionObserver((entries) => setSolid(!(entries[0]?.isIntersecting ?? true)));
+    io.observe(el);
+    return () => io.disconnect();
   }, []);
 
+
   return (
-    <header
+    <>
+      <div ref={sentinel} aria-hidden="true" className="absolute top-12 h-px w-full" />
+      <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
         solid ? "bg-background/75 backdrop-blur-md border-b border-border" : "bg-transparent"
       }`}
@@ -49,6 +55,7 @@ export function Navbar() {
           Buy Aqua
         </a>
       </nav>
-    </header>
+      </header>
+    </>
   );
 }
