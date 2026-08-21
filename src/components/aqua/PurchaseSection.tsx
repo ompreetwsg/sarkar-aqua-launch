@@ -21,7 +21,7 @@ export function PurchaseSection() {
           <p className="eyebrow">Eau de Parfum · Unisex</p>
           <h2 className="mt-4 text-4xl md:text-6xl">SARKAR Aqua</h2>
           <p className="mt-3 text-sm tracking-[0.2em] text-muted-foreground">100 ML</p>
-          <p className="mt-8 font-serif text-4xl">₹1,499</p>
+          <p className="mt-8 font-serif text-4xl">₹10,500</p>
           <p className="mt-3 text-sm text-muted-foreground">
             Fresh aquatic character. Clean woody finish.
           </p>
