@@ -27,25 +27,25 @@
   --font-editorial: "Cormorant Garamond", Georgia, serif;
   --font-ui: "Inter", system-ui, sans-serif;
 
-  --background: oklch(0.15 0.028 218);
-  --foreground: oklch(0.96 0.008 200);
-  --card: oklch(0.2 0.032 216);
-  --card-foreground: oklch(0.96 0.008 200);
-  --primary: oklch(0.8 0.1 196);
-  --primary-foreground: oklch(0.13 0.028 218);
-  --secondary: oklch(0.24 0.034 214);
-  --secondary-foreground: oklch(0.96 0.008 200);
-  --muted: oklch(0.23 0.03 216);
-  --muted-foreground: oklch(0.75 0.02 205);
-  --accent: oklch(0.85 0.09 191);
-  --accent-foreground: oklch(0.13 0.028 218);
-  --border: oklch(1 0 0 / 13%);
-  --ring: oklch(0.8 0.1 196);
+  --background: oklch(0.14 0 0);
+  --foreground: oklch(0.97 0 0);
+  --card: oklch(0.19 0 0);
+  --card-foreground: oklch(0.97 0 0);
+  --primary: oklch(0.97 0 0);
+  --primary-foreground: oklch(0.14 0 0);
+  --secondary: oklch(0.22 0 0);
+  --secondary-foreground: oklch(0.97 0 0);
+  --muted: oklch(0.22 0 0);
+  --muted-foreground: oklch(0.74 0 0);
+  --accent: oklch(0.88 0 0);
+  --accent-foreground: oklch(0.14 0 0);
+  --border: oklch(1 0 0 / 14%);
+  --ring: oklch(0.9 0 0);
 
-  --gradient-deep: linear-gradient(180deg, oklch(0.12 0.025 218), oklch(0.22 0.04 205));
-  --gradient-veil: linear-gradient(180deg, transparent, oklch(0.13 0.026 218 / 0.92));
-
+  --gradient-deep: linear-gradient(180deg, oklch(0.1 0 0), oklch(0.22 0 0));
+  --gradient-veil: linear-gradient(180deg, transparent, oklch(0.12 0 0 / 0.92));
 }
+
 
 @layer base {
   * {
