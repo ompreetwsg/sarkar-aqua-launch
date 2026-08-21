@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const LINKS = [
   { href: "#fragrance", label: "Fragrance" },
@@ -9,13 +9,17 @@ const LINKS = [
 
 export function Navbar() {
   const [solid, setSolid] = useState(false);
+  const sentinel = useRef<HTMLDivElement>(null);
 
+  // IntersectionObserver instead of a scroll handler: no per-frame work on the main thread.
   useEffect(() => {
-    const onScroll = () => setSolid(window.scrollY > 48);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    const el = sentinel.current;
+    if (!el) return;
+    const io = new IntersectionObserver(([e]) => setSolid(!e.isIntersecting));
+    io.observe(el);
+    return () => io.disconnect();
   }, []);
+
 
   return (
     <header
