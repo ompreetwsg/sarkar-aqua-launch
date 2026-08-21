@@ -49,7 +49,7 @@ export function Lifestyle() {
                 decoding="async"
                 sizes="(max-width: 768px) 90vw, 30vw"
                 alt={s.alt}
-                className="w-full"
+                className="mono-shot w-full"
               />
               <figcaption className="mt-5">
                 <h3 className="eyebrow text-foreground">{s.label}</h3>

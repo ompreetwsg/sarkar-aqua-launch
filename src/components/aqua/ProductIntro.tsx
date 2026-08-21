@@ -14,7 +14,7 @@ export function ProductIntro() {
             decoding="async"
             sizes="(max-width: 768px) 88vw, 42vw"
             alt="SARKAR Aqua 100 ml Eau de Parfum bottle shaped as a chess king in deep blue glass"
-            className="mx-auto w-full max-w-[420px] mix-blend-screen"
+            className="mono-shot mx-auto w-full max-w-[420px] mix-blend-screen"
           />
         </div>
         <div className="reveal">

@@ -39,9 +39,10 @@ export function Hero() {
             width={900}
             height={900}
             decoding="async"
+            fetchPriority="high"
             sizes="(max-width: 768px) 92vw, 44vw"
             alt="SARKAR Aqua chess-king perfume bottle with its cylinder and box packaging encased in ice"
-            className="mx-auto w-full max-w-[520px]"
+            className="mono-shot mx-auto w-full max-w-[520px]"
           />
         </div>
       </div>
