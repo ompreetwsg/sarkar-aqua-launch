@@ -89,6 +89,12 @@
   background: linear-gradient(90deg, var(--color-border), transparent);
 }
 
+/* Monochrome product imagery: black & white art direction */
+@utility mono-shot {
+  filter: grayscale(1) contrast(1.06);
+}
+
+
 @utility reveal {
   opacity: 0;
   transform: translateY(24px);
