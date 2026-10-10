@@ -1,0 +1,2 @@
+- [ ] Finish approved SARKAR AQUA SEO/content and AI-readability improvements; validate the public preview and build.
+- [ ] Update footer Instagram links to the two accounts supplied by the user.
